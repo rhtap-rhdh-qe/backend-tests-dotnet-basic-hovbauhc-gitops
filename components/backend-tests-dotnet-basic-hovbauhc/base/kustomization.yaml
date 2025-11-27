@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: backend-tests-dotnet-basic-hovbauhc
+  janus-idp.io/tekton: backend-tests-dotnet-basic-hovbauhc
+  backstage.io/kubernetes-id: backend-tests-dotnet-basic-hovbauhc
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: backend-tests-dotnet-basic-hovbauhc
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
